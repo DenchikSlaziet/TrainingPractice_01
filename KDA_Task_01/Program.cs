@@ -13,7 +13,7 @@ namespace KDA_Task_01
         {
             var user = new User(GetParseInt("кол-во золота"));
             var seller = new Seller(user);
-            Console.WriteLine($"Курс\n1 кристал = {seller.GetPrice()}");;
+            Console.WriteLine($"Курс\n1 кристал = {seller.GetPrice()} золотых");;
             seller.Sell(GetParseInt("желаемое кол-во кристалов"));
             Console.ReadLine();
 

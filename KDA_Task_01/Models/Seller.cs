@@ -9,7 +9,7 @@ namespace KDA_Task_01.Models
     public class Seller
     {
         public User CurrentUser { get; set; }
-        private const int PRICE = 10;
+        public const int PRICE = 10;
 
         public Seller(User currentUser)
         {
@@ -26,6 +26,7 @@ namespace KDA_Task_01.Models
                 CurrentUser.CristalCount++;
                 countCristal--;
             }
+
             Console.WriteLine("Продажа успешно выполнена");
             PrintCheck();
         }

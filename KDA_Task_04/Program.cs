@@ -11,8 +11,8 @@ namespace KDA_Task_04
     {
         static void Main(string[] args)
         {
-            var boss = new Boss(GetParseString("для босса"));
-            var player = new Player(GetParseString("для героя"));
+            var boss = new Boss(GetParseString("для босса"),300);
+            var player = new Player(GetParseString("для героя"),500);
             Spell spell = null;
             while(!player.IsDeath && !boss.IsDeath)
             {            
@@ -46,7 +46,7 @@ namespace KDA_Task_04
                 boss = resultRound.Item2;
                 player = resultRound.Item1;
 
-                Console.WriteLine($"{boss.Name}: {boss.HP}\n{player.Name}: {player.HP}\n");
+                Console.WriteLine($"{boss.Name}: {boss.HP} HP\n{player.Name}: {player.HP} HP\n");
             }
 
             if (player.IsDeath)

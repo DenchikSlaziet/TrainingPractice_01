@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Models\Boss.cs" />
     <Compile Include="Models\Dimensional.cs" />
+    <Compile Include="Models\Essence.cs" />
     <Compile Include="Models\Huganzakura.cs" />
     <Compile Include="Models\Player.cs" />
     <Compile Include="Models\Ramashon.cs" />

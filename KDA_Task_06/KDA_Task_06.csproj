@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F6CC06AE-566C-41A4-BDDD-5A93E840978B}</ProjectGuid>
+    <ProjectGuid>{5B55C6FB-3D92-4709-A07B-19D35AE35FFB}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>KDA_Task_01</RootNamespace>
-    <AssemblyName>KDA_Task_01</AssemblyName>
+    <RootNamespace>KDA_Task_06</RootNamespace>
+    <AssemblyName>KDA_Task_06</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,10 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\SellController.cs" />
-    <Compile Include="Models\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Synopsis.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

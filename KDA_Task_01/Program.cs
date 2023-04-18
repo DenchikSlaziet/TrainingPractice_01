@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,9 +13,10 @@ namespace KDA_Task_01
         static void Main(string[] args)
         {
             var user = new User(GetParseInt("кол-во золота"));
-            var seller = new Seller(user);
-            Console.WriteLine($"Курс\n1 кристал = {seller.GetPrice()} золотых");;
-            seller.Sell(GetParseInt("желаемое кол-во кристалов"));
+            Console.WriteLine($"Курс\n1 кристал = 10 золотых");
+            var count = GetParseInt("желаемое кол-во кристалов");
+            var seller = new SellContrller(user, count);
+            seller.Sell();
             Console.ReadLine();
 
         }

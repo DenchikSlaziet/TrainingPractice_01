@@ -6,28 +6,28 @@ using System.Threading.Tasks;
 
 namespace KDA_Task_01.Models
 {
-    public class Seller
+    public class SellContrller
     {
         public User CurrentUser { get; set; }
         public const int PRICE = 10;
+        public int CountCristal { get; set; }
+        public bool IsGood => PRICE * CountCristal <= CurrentUser.GoldCount;
 
-        public Seller(User currentUser)
+        public SellContrller(User currentUser,int countcristal)
         {
             CurrentUser = currentUser;
+            CountCristal = countcristal;
         }
 
         public int GetPrice() => PRICE;
 
-        public void Sell(int countCristal)
+        public void Sell()
         {
-            while(CurrentUser.GoldCount-PRICE>=0 && countCristal != 0)
+            if (IsGood)
             {
-                CurrentUser.GoldCount -= PRICE;
-                CurrentUser.CristalCount++;
-                countCristal--;
+                CurrentUser.CristalCount+=CountCristal;
+                CurrentUser.GoldCount-= CountCristal * PRICE;
             }
-
-            Console.WriteLine("Продажа успешно выполнена");
             PrintCheck();
         }
 

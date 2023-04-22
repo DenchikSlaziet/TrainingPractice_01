@@ -39,6 +39,13 @@ namespace KDA_Task_04
                         spell = new Dimensional();
                         Console.WriteLine($"Вы востанавливаете {spell.Health} HP");
                         break;
+                    case 4:
+                        spell = new Kick();
+                        Console.WriteLine($"Вы наносите {spell.Damage} урона");
+                        break;
+                    default:
+                        Console.WriteLine("Такого заклинания нет");
+                        break;
                 }
 
                 var round = new Round(boss, player, spell);
@@ -68,7 +75,8 @@ namespace KDA_Task_04
                 Console.WriteLine("Выбирите заклинание\n" +
                    "1.Рашамон – призывает теневого духа для нанесения атаки (Отнимает 100 хп игроку)\n" +
                    "2.Хуганзакура (Может быть выполнен только после призыва теневого духа), наносит 100 ед. урона\n" +
-                   "3.Межпространственный разлом – позволяет скрыться в разломе и восстановить 250 хп. Урон босса по вам не проходит\n");
+                   "3.Межпространственный разлом – позволяет скрыться в разломе и восстановить 250 хп. Урон босса по вам не проходит\n"+
+                   "4.Удар – Наносит 100 урона\n");
 
                 if (Int32.TryParse(Console.ReadLine(), out int value) && value<4 && value>0)
                 {
